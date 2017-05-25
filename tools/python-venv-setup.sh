@@ -5,7 +5,7 @@
 # Name: Python venv setup
 # Version: 1.0.0
 # Description:  Bootstrapping script that enables users to download and install
-# latest Python 3.6 using Miniconda3 and setup venv with Python libraries
+# latest Python 3.6 using Miniconda and setup venv with Python libraries
 # jupyter, pandas, keras, sklearn, seaborn tensorflow/tensorflow-gpu, etc.
 
 # setup script configuration values
