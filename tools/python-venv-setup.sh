@@ -160,7 +160,7 @@ then
     # remove downloaded miniconda installation
     rm "$THIS_DIR/$MC_LATEST"
     # update all miniconda libraries
-    source "$MC_PREFIX/bin/activate" && conda update --all -y && source deactivate
+    bash -c "source $MC_PREFIX/bin/activate && conda update --all -y && source deactivate"
 fi
 # create the venv
 /bin/bash -c "source $MC_PREFIX/bin/activate && python -m venv --without-pip $VENV_PREFIX && echo -n conda $VENV_PREFIX && source deactivate"
