@@ -20,7 +20,7 @@ MC_URL="https://repo.continuum.io/miniconda/$MC_LATEST"
 MC_PREFIX="$HOME/miniconda3"
 MC_REUSE=0
 VENV_PREFIX="$HOME/venv/$TF"
-PYTHON_LIBRARIES="jupyter pandas keras sklearn seaborn $TF"
+PYTHON_LIBRARIES="jupyter pandas keras sklearn h5py Pillow seaborn plotly bokeh $TF"
 
 while getopts "bghm:rv:p:" x; do
     case "$x" in
