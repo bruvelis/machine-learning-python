@@ -47,7 +47,7 @@ Installs latest Python using Miniconda3 and setup venv for TensorFlow.
             TF_GPU="-gpu"
 			TF="tensorflow$TF_GPU"
             VENV_PREFIX="$HOME/venv/$TF"
-			PYTHON_LIBRARIES="jupyter pandas keras sklearn seaborn $TF"
+			PYTHON_LIBRARIES="jupyter pandas keras sklearn h5py Pillow seaborn plotly bokeh $TF"
             ;;
         m)
             MC_PREFIX="$OPTARG"
