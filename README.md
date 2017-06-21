@@ -25,11 +25,15 @@ git clone https://github.com/bruvelis/machine-learning-python.git
 ```bash
 bash ../machine-learning-python/tools/python-venv-setup.sh
 ```
-#### Alternatively, run setup script in batch mode without user interaction by using swith `-b` (default Miniconda install path is `$HOME/miniconda3`; default Python virtual environment path is `$HOME/venv/tensorflow`:
+#### Alternatively, run setup script in batch mode without user interaction by using command line argument `-b` (default Miniconda install path is `$HOME/miniconda3`; default Python virtual environment path is `$HOME/venv/tensorflow`:
 ```bash
 bash ../machine-learning-python/tools/python-venv-setup.sh -b
 ```
-#### If you have setup Nvidia CUDA, CUDNN libraries, you can use switch `-g` to install GPU-accelerated TensorFlow verision (default Python virtual environment path is then `$HOME/venv/tensorflow-gpu`):
+#### To update Python virtual environment libraries and reuse existing Miniconda and Python virtual environemnt you can use a command line argument `-r`:
+```bash
+bash ../machine-learning-python/tools/python-venv-setup.sh -b -r
+```
+#### If your system has Nvidia CUDA, CUDNN libraries, you can use a command line argument `-g` to install GPU-accelerated TensorFlow verision (default Python virtual environment path is then `$HOME/venv/tensorflow-gpu`):
 ```bash
 bash ../machine-learning-python/tools/python-venv-setup.sh -b -g
 ```
