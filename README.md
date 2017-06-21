@@ -82,7 +82,7 @@ sudo sed -i "s/[# ]   BusID \"PCI.*/    BusID \"PCI:"`lspci -vnn | grep '\''[030
 ```bash
 sudo prime-select intel
 ```
-#### Restart and check bumblebeed deamon (might be necessary to reboot your system if restarting the service does not help):
+#### Restart and check bumblebeed deamon (reboot your system if restarting the service does not enable bumblebeed service):
 ```bash
 sudo service bumblebeed restart
 sudo service bumblebeed status
