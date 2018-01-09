@@ -6,7 +6,7 @@ As Ubuntu 14.04 and Ubuntu 16.04 does not ship with Python 3.6 use bootstrapping
 [tools/python-venv-setup.sh](tools/python-venv-setup.sh) to download and install latest 
 Python 3.6 using Miniconda and setup venv with common ML Python libraries:
 ```bash
-jupyter pandas keras sklearn h5py Pillow seaborn plotly bokeh tensorlfow{-gpu}
+pip install --upgrade jupyter pandas keras sklearn h5py Pillow seaborn plotly bokeh tensorlfow{-gpu}
 ```
 ### Setup instructions for Python 3.6 virtual environment (venv)
 #### Install git
@@ -56,9 +56,9 @@ sudo apt update
 ```bash
 sudo apt --yes install software-properties-common
 ```
-#### Install cuda cuda-drivers (nvidia GPU drivers) and cudnn libraries
+#### Install cuda-drivers (GPU drivers), CUDA Toolkit (GPU-accelerated libraries) and cuDNN (GPU-accelerated Deep Neural Network library)
 ```bash
-sudo apt --yes install cuda cuda-drivers libcudnn5-dev libcudnn6-dev
+sudo apt --yes install cuda-drivers cuda libcudnn5-dev libcudnn6-dev libcudnn7-dev
 ```
 
 ### To add support for NVIDIA Optimus technology under Linux (if you system supports Optimus technology):
@@ -72,7 +72,7 @@ sudo apt --yes install bumblebee
 ```
 #### Set installed nvidia driver version in `/etc/bumblebee/bumblebee.conf`
 ```bash
-sudo sed -i -E 's/(nvidia-+)([0-9]{3}|current)/\1'`dpkg -l | grep -E 'ii  nvidia-[0-9]{3}\s' | sed -E 's/^ii\s*nvidia-([0-9]{3})\s.*/\1/'`'/g' /etc/bumblebee/bumblebee.conf
+sudo sed -i -E 's/(nvidia-+)([0-9]{3}|current)/\1'`dpkg -l | grep -E 'ii\s+nvidia-[0-9]{3}\s' | sed -E 's/^ii\s*nvidia-([0-9]{3})\s.*/\1/'`'/g' /etc/bumblebee/bumblebee.conf
 ```
 #### Set Nvidia Graphics Card PCIE BusID in `/etc/bumblebee/xorg.conf.nvidia`
 ```bash
